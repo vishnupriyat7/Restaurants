@@ -23,11 +23,24 @@ function Home() {
               className="d-flex align-items-center justify-content-center h-25 bg-image hover-zoom"
               key={restaurant.id}
             >
-              <Card style={{ width: "20rem", background: "linear-gradient(to bottom, #ffffff 0%, #ffcc66 100%)" }}>
-                <Card.Header style={{fontSize: "1rem", fontWeight: "bold", color: "black"}}>{restaurant.cuisine_type}</Card.Header>
+              <Card
+                style={{
+                  width: "20rem",
+                  background:
+                    "linear-gradient(to bottom, #ffffff 0%, #ffcc66 100%)",
+                }}
+              >
+                <Card.Header
+                  style={{
+                    fontSize: "1rem",
+                    fontWeight: "bold",
+                    color: "black",
+                  }}
+                >
+                  {restaurant.cuisine_type}
+                </Card.Header>
                 <Card.Img
                   variant="top"
-                  
                   style={{ height: "20rem" }}
                   src={restaurant.photograph}
                 />
