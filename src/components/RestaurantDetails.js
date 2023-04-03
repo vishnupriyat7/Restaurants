@@ -22,18 +22,18 @@ function RestaurantDetails() {
 
   // eslint-disable-next-line eqeqeq
   const findRestaurant = restaurant.find((item) => item.id == id);
-    console.log(findRestaurant);
+    // console.log(findRestaurant);
 
   return (
     <>
       {findRestaurant && (
         <Container>
           <Row className="d-flex align-items-center justify-content-center">
-          <Col md={3}>
+          <Col md={12}  className="d-flex align-items-center justify-content-center">
                 <h1>{`${findRestaurant.name}`}</h1>
             </Col>
           </Row>
-            <Col md={3}>
+            <Col md={12}>
               <Image
                 src={`${findRestaurant.photograph}`}
                 alt={`${findRestaurant.name}`}
@@ -42,6 +42,13 @@ function RestaurantDetails() {
                 style={{ height: "35rem", width:"35rem" }}
               />
             </Col>
+            <Col md={12}>
+                <h3>Neighbourhood: {`${findRestaurant.name}`}</h3>
+                <h4>Address: {`${findRestaurant.address}`}</h4>
+                <h4>Cuisine Type: {`${findRestaurant.cuisine_type}`}</h4>
+                <h4>Operating Hours: {`${findRestaurant.operating_hours[0]}`}</h4>
+            </Col>
+            
            
         </Container>
       )}
